@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import "Parser.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *path  = [[[NSBundle mainBundle]resourcePath] stringByAppendingPathComponent:@"data.xml"];
+    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc]initWithData:data];
+    
+    Parser *theParser = [[Parser alloc]initParser];
+    [xmlParser setDelegate:theParser];
+    
+    BOOL worked = [xmlParser parse];
+    if (worked) {
+        NSLog(@"Ok, amount %i", [_listArray count]);
+    }
+    else
+    {
+        NSLog(@"mmm");
+    }
+    
     // Override point for customization after application launch.
     return YES;
 }

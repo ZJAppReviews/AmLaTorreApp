@@ -15,6 +15,9 @@
 		A9E83A7D1A1E824000772103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E83A7C1A1E824000772103 /* Images.xcassets */; };
 		A9E83A801A1E824000772103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E83A7E1A1E824000772103 /* LaunchScreen.xib */; };
 		A9E83A8C1A1E824000772103 /* AMLaTorreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A8B1A1E824000772103 /* AMLaTorreTests.m */; };
+		A9E83A991A1E877700772103 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A981A1E877700772103 /* List.m */; };
+		A9E83A9C1A1E884900772103 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A9B1A1E884900772103 /* Parser.m */; };
+		A9E83A9E1A1E90DF00772103 /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = A9E83A9D1A1E90DF00772103 /* data.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		A9E83A851A1E824000772103 /* AMLaTorreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMLaTorreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E83A8A1A1E824000772103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E83A8B1A1E824000772103 /* AMLaTorreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMLaTorreTests.m; sourceTree = "<group>"; };
+		A9E83A971A1E877700772103 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		A9E83A981A1E877700772103 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		A9E83A9A1A1E884900772103 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		A9E83A9B1A1E884900772103 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		A9E83A9D1A1E90DF00772103 /* data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +92,13 @@
 		A9E83A6B1A1E824000772103 /* AMLaTorre */ = {
 			isa = PBXGroup;
 			children = (
+				A9E83A9D1A1E90DF00772103 /* data.xml */,
 				A9E83A701A1E824000772103 /* AppDelegate.h */,
 				A9E83A711A1E824000772103 /* AppDelegate.m */,
+				A9E83A971A1E877700772103 /* List.h */,
+				A9E83A981A1E877700772103 /* List.m */,
+				A9E83A9A1A1E884900772103 /* Parser.h */,
+				A9E83A9B1A1E884900772103 /* Parser.m */,
 				A9E83A731A1E824000772103 /* MasterViewController.h */,
 				A9E83A741A1E824000772103 /* MasterViewController.m */,
 				A9E83A761A1E824000772103 /* DetailViewController.h */,
@@ -205,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E83A7B1A1E824000772103 /* Main.storyboard in Resources */,
+				A9E83A9E1A1E90DF00772103 /* data.xml in Resources */,
 				A9E83A801A1E824000772103 /* LaunchScreen.xib in Resources */,
 				A9E83A7D1A1E824000772103 /* Images.xcassets in Resources */,
 			);
@@ -224,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E83A991A1E877700772103 /* List.m in Sources */,
 				A9E83A721A1E824000772103 /* AppDelegate.m in Sources */,
 				A9E83A751A1E824000772103 /* MasterViewController.m in Sources */,
 				A9E83A6F1A1E824000772103 /* main.m in Sources */,
+				A9E83A9C1A1E884900772103 /* Parser.m in Sources */,
 				A9E83A781A1E824000772103 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AMLaTorre/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AMLaTorre/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

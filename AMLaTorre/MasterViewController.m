@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
+
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
@@ -27,6 +28,10 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    _app = [[UIApplication sharedApplication] delegate];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,14 +65,26 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    //return self.objects.count;
+    
+    return [_app.listArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    //NSDate *object = self.objects[indexPath.row];
+    //cell.textLabel.text = [object description];
+    
+    List *object = _app.listArray[indexPath.row];
+    NSLog(@"%@", object.avversario);
+    cell.textLabel.text =  object.avversario;
+    
+    NSString *dataOra = object.data;
+    dataOra = [dataOra stringByAppendingString:@" - "];
+    dataOra = [dataOra stringByAppendingString:object.ora];
+    cell.detailTextLabel.text = dataOra;
+    
     return cell;
 }
 
