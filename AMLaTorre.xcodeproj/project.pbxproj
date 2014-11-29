@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90FE18B1A1EA5D700883CD6 /* cars_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A90FE18A1A1EA5D700883CD6 /* cars_old.png */; };
+		A967EC781A1EA3DD00A79823 /* home_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A967EC771A1EA3DD00A79823 /* home_old.png */; };
+		A9C9D3941A21F57C0032D87D /* cars.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D3921A21F57C0032D87D /* cars.png */; };
+		A9C9D3951A21F57C0032D87D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D3931A21F57C0032D87D /* home.png */; };
 		A9E83A6F1A1E824000772103 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A6E1A1E824000772103 /* main.m */; };
 		A9E83A721A1E824000772103 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A711A1E824000772103 /* AppDelegate.m */; };
 		A9E83A751A1E824000772103 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A741A1E824000772103 /* MasterViewController.m */; };
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A90FE18A1A1EA5D700883CD6 /* cars_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cars_old.png; sourceTree = "<group>"; };
+		A967EC771A1EA3DD00A79823 /* home_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_old.png; sourceTree = "<group>"; };
+		A9C9D3921A21F57C0032D87D /* cars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cars.png; sourceTree = "<group>"; };
+		A9C9D3931A21F57C0032D87D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		A9E83A691A1E824000772103 /* AMLaTorre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMLaTorre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E83A6D1A1E824000772103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E83A6E1A1E824000772103 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +100,10 @@
 		A9E83A6B1A1E824000772103 /* AMLaTorre */ = {
 			isa = PBXGroup;
 			children = (
+				A9C9D3921A21F57C0032D87D /* cars.png */,
+				A9C9D3931A21F57C0032D87D /* home.png */,
+				A90FE18A1A1EA5D700883CD6 /* cars_old.png */,
+				A967EC771A1EA3DD00A79823 /* home_old.png */,
 				A9E83A9D1A1E90DF00772103 /* data.xml */,
 				A9E83A701A1E824000772103 /* AppDelegate.h */,
 				A9E83A711A1E824000772103 /* AppDelegate.m */,
@@ -218,9 +230,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E83A7B1A1E824000772103 /* Main.storyboard in Resources */,
+				A967EC781A1EA3DD00A79823 /* home_old.png in Resources */,
+				A90FE18B1A1EA5D700883CD6 /* cars_old.png in Resources */,
 				A9E83A9E1A1E90DF00772103 /* data.xml in Resources */,
 				A9E83A801A1E824000772103 /* LaunchScreen.xib in Resources */,
 				A9E83A7D1A1E824000772103 /* Images.xcassets in Resources */,
+				A9C9D3941A21F57C0032D87D /* cars.png in Resources */,
+				A9C9D3951A21F57C0032D87D /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +452,7 @@
 				A9E83A911A1E824000772103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9E83A921A1E824000772103 /* Build configuration list for PBXNativeTarget "AMLaTorreTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +461,7 @@
 				A9E83A941A1E824000772103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "List.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) List* detailItem; //id detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lblAvversario;
+@property (weak, nonatomic) IBOutlet UILabel *lblOra;
+@property (weak, nonatomic) IBOutlet UILabel *lblData;
+@property (weak, nonatomic) IBOutlet UIImageView *imgCasaTrasferta;
+@property (weak, nonatomic) IBOutlet UILabel *lblNomeGiorno;
+@property (weak, nonatomic) IBOutlet UITextView *txtIndirizzoPalestra;
 
 @end
 

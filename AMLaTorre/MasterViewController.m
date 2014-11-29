@@ -24,14 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     
     _app = [[UIApplication sharedApplication] delegate];
     
     [self.tableView reloadData];
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationItem.title = @"AM La Torre";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +60,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        
+        List *object = _app.listArray[indexPath.row];
+        //NSDate *object = self.objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
@@ -72,34 +81,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    //NSDate *object = self.objects[indexPath.row];
-    //cell.textLabel.text = [object description];
     
     List *object = _app.listArray[indexPath.row];
     NSLog(@"%@", object.avversario);
+    /*
     cell.textLabel.text =  object.avversario;
     
     NSString *dataOra = object.data;
     dataOra = [dataOra stringByAppendingString:@" - "];
     dataOra = [dataOra stringByAppendingString:object.ora];
     cell.detailTextLabel.text = dataOra;
+    */
+    
+    UILabel *avversarioLabel = (UILabel *) [cell viewWithTag:10];
+    avversarioLabel.text = object.avversario;
+    
+    UILabel *dataLabel = (UILabel *) [cell viewWithTag:2];
+    dataLabel.text = object.data;
+    
+    UILabel *oraLabel = (UILabel *) [cell viewWithTag:3];
+    oraLabel.text = object.ora;
+    
+    UIImageView *immagine = (UIImageView *) [cell viewWithTag:1];
+    NSString *nomeImg = @"cars.png";
+    if ([object.luogo isEqualToString:@"Crespano del Grappa"]) {
+        nomeImg = @"home.png";
+    }
+    
+    immagine.image = [UIImage imageNamed:nomeImg];
     
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
 
 @end
