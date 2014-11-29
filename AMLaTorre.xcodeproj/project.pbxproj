@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A90FE18B1A1EA5D700883CD6 /* cars_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A90FE18A1A1EA5D700883CD6 /* cars_old.png */; };
 		A967EC781A1EA3DD00A79823 /* home_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A967EC771A1EA3DD00A79823 /* home_old.png */; };
+		A9749CC31A2A5C4B00A28890 /* Logo_fb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9749CC21A2A5C4B00A28890 /* Logo_fb.jpg */; };
 		A9C9D3941A21F57C0032D87D /* cars.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D3921A21F57C0032D87D /* cars.png */; };
 		A9C9D3951A21F57C0032D87D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C9D3931A21F57C0032D87D /* home.png */; };
 		A9E83A6F1A1E824000772103 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E83A6E1A1E824000772103 /* main.m */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		A90FE18A1A1EA5D700883CD6 /* cars_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cars_old.png; sourceTree = "<group>"; };
 		A967EC771A1EA3DD00A79823 /* home_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_old.png; sourceTree = "<group>"; };
+		A9749CC21A2A5C4B00A28890 /* Logo_fb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logo_fb.jpg; sourceTree = "<group>"; };
 		A9C9D3921A21F57C0032D87D /* cars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cars.png; sourceTree = "<group>"; };
 		A9C9D3931A21F57C0032D87D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		A9E83A691A1E824000772103 /* AMLaTorre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMLaTorre.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 		A9E83A6B1A1E824000772103 /* AMLaTorre */ = {
 			isa = PBXGroup;
 			children = (
+				A9749CC21A2A5C4B00A28890 /* Logo_fb.jpg */,
 				A9C9D3921A21F57C0032D87D /* cars.png */,
 				A9C9D3931A21F57C0032D87D /* home.png */,
 				A90FE18A1A1EA5D700883CD6 /* cars_old.png */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9749CC31A2A5C4B00A28890 /* Logo_fb.jpg in Resources */,
 				A9E83A7B1A1E824000772103 /* Main.storyboard in Resources */,
 				A967EC781A1EA3DD00A79823 /* home_old.png in Resources */,
 				A90FE18B1A1EA5D700883CD6 /* cars_old.png in Resources */,
